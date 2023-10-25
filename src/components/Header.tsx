@@ -1,6 +1,7 @@
 import { HStack, Image, useColorModeValue } from "@chakra-ui/react";
 import lionLogo from "../assets/LionLogo.webp";
 import ColorThemeSwitch from "./ColorThemeSwitch";
+import NavMenu from "./NavMenu";
 
 const Header = () => {
   const bg = useColorModeValue("orange.400", "blackAlpha.700");
@@ -10,10 +11,12 @@ const Header = () => {
     <HStack
       color={textColor}
       bg={bg}
-      paddingX={"5px"}
+      pr={"10px"}
+      pl={"7px"}
       justifyContent={"space-between"}
     >
-      <Image marginBottom="2px" src={lionLogo} boxSize={10} />
+      <Image mb="2px" src={lionLogo} boxSize={10} />
+      <NavMenu />
       <ColorThemeSwitch />
     </HStack>
   );
