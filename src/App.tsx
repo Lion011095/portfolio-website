@@ -1,43 +1,16 @@
-import { Grid, GridItem, useColorModeValue } from "@chakra-ui/react";
-import Header from "./components/Header";
+import {
+  Grid,
+  GridItem,
+  Heading,
+  VStack,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import Header from "./components/navBar/Header";
 import About from "./components/About";
-import Experience, { Education } from "./components/Education";
-
-const educationList: Education[] = [
-  {
-    school: "Seneca College",
-    years: "2021 - 2023",
-    program: "Computer Programming",
-    location: "Newnham Campus, Toronto, ON, Canada",
-    skills: [
-      "Computer programming",
-      "Operating systems",
-      "Database and web technology",
-      "Data communication",
-      "Security",
-      "Advanced programming languages",
-      "System methodologies",
-      "Internet client and server-side development",
-      "Database system design and maintenance",
-      "Solve problems associated with software installation",
-    ],
-  },
-  {
-    school: "Self Education",
-    years: "ongoing",
-    program: "React, TypeScript, Node.js, Python, Security",
-    location: "CodeWithMosh, YouTube, Udemy, TryHackMe",
-    skills: [
-      "Data transfer protocol",
-      "Vulnarbilities and how to avoid them",
-      "NoSQL Databases (MongoDB)",
-      "React programming using functional components",
-      "Chakra UI React component library",
-      "Using TypeScript with React to ensure type safety",
-      "Strenghthning my Knowledge with Node and Express",
-    ],
-  },
-];
+import WorkList from "./components/WorkList";
+import Experience from "./components/Education";
+import SkillLevel from "./components/SkillLevel";
+import { educationList, skillLevelArr } from "./data/lists";
 
 function App() {
   const bg = useColorModeValue("gray.200", "gray.600");
@@ -49,8 +22,34 @@ function App() {
         <Header />
       </GridItem>
       <GridItem area={"main"} bg={bg}>
-        <About color={subHeadingColor} />
-        <Experience education={educationList} color={subHeadingColor} />
+        <VStack>
+          <About color={subHeadingColor} />
+          <Experience education={educationList} color={subHeadingColor} />
+          <Heading
+            mr={"600px"}
+            mb={"40px"}
+            pr={"252px"}
+            color={useColorModeValue("orange.400", "orange.300")}
+            id="skills"
+          >
+            Skill Knowledge
+          </Heading>
+          <SkillLevel
+            skillLevelArr={skillLevelArr}
+            barColor={subHeadingColor}
+          />
+          <Heading size={"lg"}>Worked With</Heading>
+          <WorkList />
+          <Heading
+            mr={"600px"}
+            mb={"40px"}
+            pr={"380px"}
+            color={useColorModeValue("orange.400", "orange.300")}
+            id="skills"
+          >
+            Portfolio
+          </Heading>
+        </VStack>
       </GridItem>
       <GridItem area={"footer"} bg={"green.300"}>
         Footer

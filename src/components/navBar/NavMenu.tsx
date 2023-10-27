@@ -1,19 +1,12 @@
 import { Text, HStack } from "@chakra-ui/react";
+import { menu } from "../../data/lists";
 
 const NavMenu = () => {
-  const menu: string[] = [
-    "ABOUT",
-    "EDUCATION",
-    "SKILLS",
-    "PORTFOLIO",
-    "CONTACT",
-  ];
-
   return (
     <HStack>
       {menu.map((item) => (
         <Text mx={3} as={"b"}>
-          {item}
+          <a href={"#" + item.toLowerCase()}>{item}</a>
         </Text>
       ))}
     </HStack>

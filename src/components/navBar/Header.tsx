@@ -1,5 +1,5 @@
 import { HStack, Image, useColorModeValue } from "@chakra-ui/react";
-import lionLogo from "../assets/LionLogo.webp";
+import lionLogo from "../../assets/LionLogo.webp";
 import ColorThemeSwitch from "./ColorThemeSwitch";
 import NavMenu from "./NavMenu";
 

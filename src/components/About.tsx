@@ -7,28 +7,11 @@ import {
 } from "@chakra-ui/react";
 import name from "../assets/Lion glitch 800.gif";
 import SkillList from "./SkillList";
+import { softSkills, techSkills } from "../data/lists";
 
 interface AboutProps {
   color: string;
 }
-
-const softSkills = [
-  "Analytical and technical approach to problem solving.",
-  "Highly organized individual who excels in managing multiple projects and tasks simultaneously.",
-  "Team player who takes initiative with strong communication skills who collaborates well with others.",
-  "Extremely self-motivated and self-disciplined with good time managment kills assuring tasks are done on time.",
-  "Strive to provide exceptional customer service.",
-  "Willing to take on a variety of tasks.",
-];
-
-const techSkills = [
-  "Proficient in HTML, JavaScript, CSS and other web development frameworks to create responsive web pages.",
-  "Experience in creating secure sessions and forms using authentication and authorization methods",
-  "Solid knowledge of NoSQL and SQL data bases such as Oracle and MongoDB for data managment and retrival.",
-  "Excited to constently learn with new technologies and be pioneer in the tech industry.",
-  "Experience with the design and implamentation of RESTful APIs.",
-  "Proficient understanding in security and data validation.",
-];
 
 const About = ({ color }: AboutProps) => {
   const subHeadingWeight = 500;
@@ -38,7 +21,8 @@ const About = ({ color }: AboutProps) => {
       textAlign={"left"}
       pt={"60px"}
       borderBottom={"solid"}
-      borderWidth={1}
+      borderBottomWidth={1}
+      px="164px"
       borderBottomColor={color}
       id="about"
     >

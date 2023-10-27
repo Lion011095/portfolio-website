@@ -26,14 +26,13 @@ const Experience = ({ education, color }: ExperienceProps) => {
       justifyContent={"center"}
       gap={20}
       templateAreas={`"title details"`}
-      py={"60px"}
       pr={"380px"}
+      borderBottom={"solid"}
+      borderBottomWidth={1}
+      borderBottomColor={color}
     >
-      <GridItem area={"title"}>
-        <Heading
-          variant="underline"
-          color={useColorModeValue("orange.400", "orange.300")}
-        >
+      <GridItem area={"title"} id="education">
+        <Heading color={useColorModeValue("orange.400", "orange.300")}>
           Education
         </Heading>
       </GridItem>
