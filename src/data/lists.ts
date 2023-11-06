@@ -1,5 +1,6 @@
 import { Education } from "../components/Education";
 import { skillLevel } from "../components/SkillLevel";
+import gameHub from "../assets/gameHub.png";
 
 export const educationList: Education[] = [
   {
@@ -78,10 +79,10 @@ export const skillLevelArr: skillLevel[] = [
 
 export const workList = [
   "Programming Languages :  C, C++, Java, Python, JavaScript, TypeScript.",
-  "Front-End :  React - Hooks, Custom Hooks, States, HTML5 , CSS3, jQuery Bootstrap, Chakra UI.",
+  "Front-End :  React - (Hooks, Custom Hooks, States), HTML5 , CSS3, jQuery, Bootstrap, Chakra UI.",
   "Back-End :  Node.js, Express.js, Axios.",
   "Databases :  OracleDB and MongoDB.",
-  "IDEs :  IntelliJ, Visual Studio, Visual Code, PyCharm.",
+  "IDEs :  IntelliJ, Visual Studio, Visual Studio Code, PyCharm.",
   "Operating Systems :  Windows, Linux, Unix, IBM i.",
   "Version Control : Git, GitHub.",
 ];
@@ -89,8 +90,8 @@ export const workList = [
 export const softSkills = [
   "Analytical and technical approach to problem solving.",
   "Highly organized individual who excels in managing multiple projects and tasks simultaneously.",
-  "Team player who takes initiative with strong communication skills who collaborates well with others.",
-  "Extremely self-motivated and self-disciplined with good time managment kills assuring tasks are done on time.",
+  "Team player who takes initiative with strong communication skills and collaborates well with others.",
+  "Extremely self-motivated and self-disciplined with good time managment skills assuring tasks are done on time.",
   "Strive on constructive feedback and constant learning.",
   "Willing to take on a variety of tasks.",
 ];
@@ -106,3 +107,19 @@ export const techSkills = [
 ];
 
 export const menu = ["ABOUT", "EDUCATION", "SKILLS", "PORTFOLIO", "CONTACT"];
+
+export const projects = [
+  {
+    name: "Game Hub",
+    tools: ["React", "TypeScript", "ChakraUI", "Axios", "VSCode"],
+    features: [
+      "Filter by: Genre and Platform",
+      "Sort games in your desired way",
+      "Search for any game you want",
+      "Scoring systems",
+      "Game Cards showing details about games",
+      "Dark Mode",
+    ],
+    image: gameHub,
+  },
+];

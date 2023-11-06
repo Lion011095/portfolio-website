@@ -1,5 +1,5 @@
 import { HStack, Icon, Switch, useColorMode } from "@chakra-ui/react";
-import { BsFillSunFill, BsFillMoonFill, BsMoonStarsFill } from "react-icons/bs";
+import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
 
 const ColorThemeSwitch = () => {
   const { toggleColorMode, colorMode } = useColorMode();

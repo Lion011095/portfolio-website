@@ -18,6 +18,7 @@ const skillLevel = ({ skillLevelArr, barColor }: skillLevelProps) => {
           <Text fontWeight={500}>{skill.name}</Text>
           <Progress
             hasStripe
+            isAnimated
             size={"lg"}
             value={skill.level}
             borderRadius={"10px"}

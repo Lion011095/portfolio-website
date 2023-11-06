@@ -10,7 +10,8 @@ import About from "./components/About";
 import WorkList from "./components/WorkList";
 import Experience from "./components/Education";
 import SkillLevel from "./components/SkillLevel";
-import { educationList, skillLevelArr } from "./data/lists";
+import { educationList, skillLevelArr, projects } from "./data/lists";
+import ProjectCard from "./components/ProjectCard";
 
 function App() {
   const bg = useColorModeValue("gray.200", "gray.600");
@@ -31,6 +32,7 @@ function App() {
             pr={"252px"}
             color={useColorModeValue("orange.400", "orange.300")}
             id="skills"
+            as={"h2"}
           >
             Skill Knowledge
           </Heading>
@@ -42,13 +44,21 @@ function App() {
           <WorkList />
           <Heading
             mr={"600px"}
-            mb={"40px"}
             pr={"380px"}
             color={useColorModeValue("orange.400", "orange.300")}
             id="skills"
+            as={"h2"}
           >
             Portfolio
           </Heading>
+          <Heading as={"h3"} size={"lg"} mb={"20px"}>
+            My Projects
+          </Heading>
+          <ProjectCard
+            projects={projects}
+            weight={500}
+            color={subHeadingColor}
+          />
         </VStack>
       </GridItem>
       <GridItem area={"footer"} bg={"green.300"}>
