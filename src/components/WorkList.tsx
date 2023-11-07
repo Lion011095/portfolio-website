@@ -8,7 +8,7 @@ const WorkList = () => {
       borderBottom={"solid"}
       borderBottomWidth={1}
       borderBottomColor={useColorModeValue("blue.600", "blue.300")}
-      px={"240px"}
+      px={"190px"}
     >
       {workList.map((item) => (
         <ListItem mb={2}>{item}</ListItem>

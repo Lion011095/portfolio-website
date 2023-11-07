@@ -5,7 +5,7 @@ const NavMenu = () => {
   return (
     <HStack>
       {menu.map((item) => (
-        <Text mx={3} as={"b"}>
+        <Text mx={3} as={"b"} key={item}>
           <a href={"#" + item.toLowerCase()}>{item}</a>
         </Text>
       ))}

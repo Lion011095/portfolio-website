@@ -1,4 +1,11 @@
-import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
+import {
+  Card,
+  CardBody,
+  HStack,
+  Heading,
+  Image,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import ToolIconList from "./ToolIconList";
 import ProjectFeatureList from "./ProjectFeatureList";
 
@@ -19,7 +26,11 @@ const ProjectCard = ({ projects, weight, color }: ProjectCardProps) => {
   return (
     <>
       {projects.map((project) => (
-        <Card maxW={"4xl"} mb={"50px"}>
+        <Card
+          maxW={"4xl"}
+          mb={"50px"}
+          bgColor={useColorModeValue("gray.300", "gray.700")}
+        >
           <CardBody>
             <Image src={project.image} borderRadius={"7px"} mb={"10px"} />
             <HStack justifyContent={"space-between"} mb={"10px"}>

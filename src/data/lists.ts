@@ -1,6 +1,8 @@
 import { Education } from "../components/Education";
 import { skillLevel } from "../components/SkillLevel";
 import gameHub from "../assets/gameHub.png";
+import wildLife from "../assets/wildlife.png";
+import cookZilla from "../assets/Cookzilla.png";
 
 export const educationList: Education[] = [
   {
@@ -79,7 +81,7 @@ export const skillLevelArr: skillLevel[] = [
 
 export const workList = [
   "Programming Languages :  C, C++, Java, Python, JavaScript, TypeScript.",
-  "Front-End :  React - (Hooks, Custom Hooks, States), HTML5 , CSS3, jQuery, Bootstrap, Chakra UI.",
+  "Front-End :  React - (Hooks, Custom Hooks, States), HTML5 , CSS3, jQuery, Handlebars, Bootstrap, Chakra UI.",
   "Back-End :  Node.js, Express.js, Axios.",
   "Databases :  OracleDB and MongoDB.",
   "IDEs :  IntelliJ, Visual Studio, Visual Studio Code, PyCharm.",
@@ -121,5 +123,27 @@ export const projects = [
       "Dark Mode",
     ],
     image: gameHub,
+  },
+  {
+    name: "CookZilla",
+    tools: ["HTML", "CSS", "JavaScript", "Handlebars", "NodeJS", "VSCode"],
+    features: [
+      "Register and login forms",
+      "Authenthication and verification of customer and admin accounts",
+      "Weekly recipes and prices",
+      "Meal Cards detailing ingredients and price",
+    ],
+    image: cookZilla,
+  },
+  {
+    name: "Wildlife",
+    tools: ["HTML", "JavaScript", "CSS", "GeoLocation", "VSCode"],
+    features: [
+      "Geo Location",
+      "Search for a specific location for species",
+      "Form to add an observation",
+      "Specie filtering",
+    ],
+    image: wildLife,
   },
 ];

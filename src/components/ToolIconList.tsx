@@ -1,5 +1,5 @@
 import { FaReact } from "react-icons/fa";
-import { SiChakraui, SiAxios } from "react-icons/si";
+import { SiChakraui, SiAxios, SiHandlebarsdotjs } from "react-icons/si";
 import {
   TbBrandTypescript,
   TbBrandJavascript,
@@ -7,9 +7,12 @@ import {
   TbBrandVite,
   TbBrandBootstrap,
   TbBrandVscode,
+  TbBrandHtml5,
+  TbLocation,
+  TbBrandCss3,
 } from "react-icons/tb";
 import { IconType } from "react-icons";
-import { HStack, Icon } from "@chakra-ui/react";
+import { HStack, Icon, useColorModeValue } from "@chakra-ui/react";
 
 interface ToolIconsProps {
   tools: string[];
@@ -26,12 +29,21 @@ const ToolIconList = ({ tools }: ToolIconsProps) => {
     Bootstrap: TbBrandBootstrap,
     VSCode: TbBrandVscode,
     Axios: SiAxios,
+    HTML: TbBrandHtml5,
+    GeoLocation: TbLocation,
+    CSS: TbBrandCss3,
+    Handlebars: SiHandlebarsdotjs,
   };
 
   return (
     <HStack marginX={"20px"}>
       {tools.map((tool) => (
-        <Icon key={tool} as={iconMap[tool]} color="gray.400" boxSize={"20px"} />
+        <Icon
+          key={tool}
+          as={iconMap[tool]}
+          color={useColorModeValue("gray.600", "gray.300")}
+          boxSize={"20px"}
+        />
       ))}
     </HStack>
   );

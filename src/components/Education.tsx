@@ -1,4 +1,5 @@
 import {
+  Box,
   Grid,
   GridItem,
   Heading,
@@ -38,7 +39,7 @@ const Experience = ({ education, color }: ExperienceProps) => {
       </GridItem>
       <GridItem area={"details"} my={"40px"}>
         {education.map((item) => (
-          <>
+          <Box key={education.indexOf(item)}>
             <Heading as={"h3"} size={"lg"} color={color}>
               {item.school}
             </Heading>
@@ -51,7 +52,7 @@ const Experience = ({ education, color }: ExperienceProps) => {
               weight={500}
               color={color}
             />
-          </>
+          </Box>
         ))}
       </GridItem>
     </Grid>
