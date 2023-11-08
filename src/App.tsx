@@ -1,5 +1,4 @@
 import {
-  Button,
   Grid,
   GridItem,
   HStack,
@@ -26,9 +25,7 @@ import ProjectCard from "./components/ProjectCard/ProjectCard";
 import { LiaIdCard } from "react-icons/lia";
 import { BsArrowUpCircleFill } from "react-icons/bs";
 import name from "./assets/Lion glitch 800.gif";
-import { useEffect, useState } from "react";
 import ContactIcons from "./components/ContactIcons";
-// import ContactIcons from "./components/ContactIcons";
 
 function App() {
   const bg = useColorModeValue("gray.200", "gray.600");
