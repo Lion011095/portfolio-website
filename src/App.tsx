@@ -1,15 +1,14 @@
 import {
-  Box,
   Button,
   Grid,
   GridItem,
   HStack,
   Heading,
   Icon,
-  Stack,
   Text,
   VStack,
   useColorModeValue,
+  Image,
 } from "@chakra-ui/react";
 import Header from "./components/navBar/Header";
 import About from "./components/About";
@@ -20,11 +19,10 @@ import { educationList, skillLevelArr, projects } from "./data/lists";
 import ProjectCard from "./components/ProjectCard";
 import { LiaIdCard } from "react-icons/lia";
 import { BsArrowUpCircleFill } from "react-icons/bs";
-import { scroll } from "framer-motion";
-import { useState } from "react";
+import { useRef } from "react";
+import name from "./assets/Lion glitch 800.gif";
 
 function App() {
-  const [iconColor, setIconColor] = useState("");
   const bg = useColorModeValue("gray.200", "gray.600");
   const subHeadingColor = useColorModeValue("blue.600", "blue.300");
 
@@ -35,6 +33,15 @@ function App() {
       </GridItem>
       <GridItem area={"main"} bg={bg} alignContent={"center"}>
         <VStack borderBottom={"solid"} borderBottomWidth={1}>
+          <Image src={name} borderBottom={"solid"} mt={10} />
+          <Heading
+            as={"h2"}
+            size={"lg"}
+            mb={10}
+            color={useColorModeValue("orange.400", "orange.300")}
+          >
+            Full-Stack Developer
+          </Heading>
           <About color={subHeadingColor} />
           <Experience education={educationList} color={subHeadingColor} />
           <Heading
@@ -76,14 +83,15 @@ function App() {
             as={BsArrowUpCircleFill}
             boxSize={"40px"}
             mt={"10px"}
-            color={iconColor}
             variant={"link"}
-            onClick={() => console.log("clicked")}
+            onClick={() => {
+              scrollTo({ top: 0, behavior: "smooth" });
+            }}
           />
         </HStack>
         <HStack justify={"space-around"}>
           <HStack>
-            <Text fontWeight={600} fontSize={"2xl"}>
+            <Text fontWeight={600} fontSize={"2xl"} id="contact">
               Contact
             </Text>
             <Icon

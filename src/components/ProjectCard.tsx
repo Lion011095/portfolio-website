@@ -30,6 +30,7 @@ const ProjectCard = ({ projects, weight, color }: ProjectCardProps) => {
           maxW={"4xl"}
           mb={"50px"}
           bgColor={useColorModeValue("gray.300", "gray.700")}
+          key={projects.indexOf(project)}
         >
           <CardBody>
             <Image src={project.image} borderRadius={"7px"} mb={"10px"} />

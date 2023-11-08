@@ -11,7 +11,9 @@ const WorkList = () => {
       px={"190px"}
     >
       {workList.map((item) => (
-        <ListItem mb={2}>{item}</ListItem>
+        <ListItem mb={2} key={item}>
+          {item}
+        </ListItem>
       ))}
     </List>
   );

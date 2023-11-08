@@ -1,11 +1,4 @@
-import {
-  VStack,
-  Image,
-  Text,
-  Heading,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import name from "../assets/Lion glitch 800.gif";
+import { VStack, Text, Heading } from "@chakra-ui/react";
 import SkillList from "./SkillList";
 import { softSkills, techSkills } from "../data/lists";
 
@@ -19,22 +12,12 @@ const About = ({ color }: AboutProps) => {
   return (
     <VStack
       textAlign={"left"}
-      pt={"60px"}
       borderBottom={"solid"}
       borderBottomWidth={1}
       px="164px"
       borderBottomColor={color}
       id="about"
     >
-      <Image src={name} borderBottom={"solid"} />
-      <Heading
-        as={"h2"}
-        size={"lg"}
-        mb={10}
-        color={useColorModeValue("orange.400", "orange.300")}
-      >
-        Full-Stack Developer
-      </Heading>
       <Heading
         w={800}
         pl={"50px"}
