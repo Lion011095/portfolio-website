@@ -6,7 +6,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import SkillList from "./SkillList";
+import SkillList from "./listComponents/SkillList";
 
 export interface Education {
   school: string;

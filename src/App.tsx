@@ -9,25 +9,33 @@ import {
   VStack,
   useColorModeValue,
   Image,
+  Link,
 } from "@chakra-ui/react";
 import Header from "./components/navBar/Header";
 import About from "./components/About";
-import WorkList from "./components/WorkList";
+import WorkList from "./components/listComponents/WorkList";
 import Experience from "./components/Education";
 import SkillLevel from "./components/SkillLevel";
-import { educationList, skillLevelArr, projects } from "./data/lists";
-import ProjectCard from "./components/ProjectCard";
+import {
+  educationList,
+  skillLevelArr,
+  projects,
+  contactList,
+} from "./data/lists";
+import ProjectCard from "./components/ProjectCard/ProjectCard";
 import { LiaIdCard } from "react-icons/lia";
 import { BsArrowUpCircleFill } from "react-icons/bs";
-import { useRef } from "react";
 import name from "./assets/Lion glitch 800.gif";
+import { useEffect, useState } from "react";
+import ContactIcons from "./components/ContactIcons";
+// import ContactIcons from "./components/ContactIcons";
 
 function App() {
   const bg = useColorModeValue("gray.200", "gray.600");
   const subHeadingColor = useColorModeValue("blue.600", "blue.300");
 
   return (
-    <Grid templateAreas={`"header" "main" "footer"`}>
+    <Grid templateAreas={`"header" "main" "contact" "footer"`}>
       <GridItem area={"header"} id="header">
         <Header />
       </GridItem>
@@ -77,9 +85,9 @@ function App() {
           />
         </VStack>
       </GridItem>
-      <GridItem area={"footer"}>
+      <GridItem area={"contact"}>
         <HStack w={"100%"} justify={"center"}>
-          <Button
+          <Icon
             as={BsArrowUpCircleFill}
             boxSize={"40px"}
             mt={"10px"}
@@ -87,11 +95,12 @@ function App() {
             onClick={() => {
               scrollTo({ top: 0, behavior: "smooth" });
             }}
+            cursor={"pointer"}
           />
         </HStack>
-        <HStack justify={"space-around"}>
+        <HStack justify={"space-between"}>
           <HStack>
-            <Text fontWeight={600} fontSize={"2xl"} id="contact">
+            <Text ml={"350px"} fontWeight={600} fontSize={"2xl"} id="contact">
               Contact
             </Text>
             <Icon
@@ -101,7 +110,37 @@ function App() {
               color={useColorModeValue("gray.800", "white")}
             />
           </HStack>
-          <VStack></VStack>
+        </HStack>
+        <HStack justify={"center"} mb={10}>
+          <VStack>
+            <ContactIcons contacts={contactList} />
+            <Text>
+              You can{" "}
+              <Link
+                color={subHeadingColor}
+                href="mailto:lyakubov.development@gamil.com"
+              >
+                Email
+              </Link>{" "}
+              me or send me a messege on{" "}
+              <Link
+                color={subHeadingColor}
+                href="https://www.linkedin.com/in/lionyakubov/"
+              >
+                LinkedIn
+              </Link>
+            </Text>
+          </VStack>
+        </HStack>
+      </GridItem>
+      <GridItem area={"footer"}>
+        <HStack
+          bg={useColorModeValue("orange.400", "blackAlpha.700")}
+          w={"100%"}
+          justify={"center"}
+          py={10}
+        >
+          <Text>L Y A K U B O V - D E V E L O P M E N T</Text>
         </HStack>
       </GridItem>
     </Grid>

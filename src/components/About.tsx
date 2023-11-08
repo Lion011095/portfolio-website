@@ -1,5 +1,5 @@
 import { VStack, Text, Heading } from "@chakra-ui/react";
-import SkillList from "./SkillList";
+import SkillList from "./listComponents/SkillList";
 import { softSkills, techSkills } from "../data/lists";
 
 interface AboutProps {

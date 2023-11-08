@@ -3,6 +3,8 @@ import { skillLevel } from "../components/SkillLevel";
 import gameHub from "../assets/gameHub.png";
 import wildLife from "../assets/wildlife.png";
 import cookZilla from "../assets/Cookzilla.png";
+import { TbBrandLinkedin } from "react-icons/tb";
+import { BsGithub } from "react-icons/bs";
 
 export const educationList: Education[] = [
   {
@@ -129,7 +131,7 @@ export const projects = [
     tools: ["HTML", "CSS", "JavaScript", "Handlebars", "NodeJS", "VSCode"],
     features: [
       "Register and login forms",
-      "Authenthication and verification of customer and admin accounts",
+      "Authentication and Authorization of customer and admin accounts",
       "Weekly recipes and prices",
       "Meal Cards detailing ingredients and price",
     ],
@@ -146,4 +148,9 @@ export const projects = [
     ],
     image: wildLife,
   },
+];
+
+export const contactList = [
+  { link: "https://www.linkedin.com/in/lionyakubov/", icon: TbBrandLinkedin },
+  { link: "https://github.com/Lion011095", icon: BsGithub },
 ];

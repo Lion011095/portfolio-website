@@ -1,5 +1,5 @@
 import { List, ListItem, useColorModeValue } from "@chakra-ui/react";
-import { workList } from "../data/lists";
+import { workList } from "../../data/lists";
 
 const WorkList = () => {
   return (
