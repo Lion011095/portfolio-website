@@ -30,7 +30,7 @@ const About = ({ color }: AboutProps) => {
       </Heading>
       <Text w={730} pl={"50px"} mb={"20px"}>
         Motivated software developer with a strong desire to excel in a
-        fast-paced environment, focusing on innovative problem-solving.
+        fast-paced environment with focus on innovative problem-solving.
       </Text>
       <SkillList
         skillList={softSkills}
