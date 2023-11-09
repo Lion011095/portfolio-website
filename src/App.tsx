@@ -33,12 +33,12 @@ function App() {
 
   return (
     <Grid templateAreas={`"header" "main" "contact" "footer"`}>
-      <GridItem area={"header"} id="header">
+      <GridItem area={"header"} id="header" pos={"fixed"} zIndex={1} w={"100%"}>
         <Header />
       </GridItem>
       <GridItem area={"main"} bg={bg} alignContent={"center"}>
         <VStack borderBottom={"solid"} borderBottomWidth={1}>
-          <Image src={name} borderBottom={"solid"} mt={10} />
+          <Image src={name} borderBottom={"solid"} mt={20} />
           <Heading
             as={"h2"}
             size={"lg"}
@@ -93,6 +93,7 @@ function App() {
               scrollTo({ top: 0, behavior: "smooth" });
             }}
             cursor={"pointer"}
+            _hover={{ color: useColorModeValue("gray.400", "gray.300") }}
           />
         </HStack>
         <HStack justify={"space-between"}>
