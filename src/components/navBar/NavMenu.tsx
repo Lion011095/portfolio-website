@@ -16,6 +16,10 @@ const NavMenu = () => {
           onClick={() => {
             scrollTo({ top: location[menu.indexOf(item)], behavior: "smooth" });
           }}
+          _hover={{
+            textDecor: "none",
+            color: useColorModeValue("blue.500", "white"),
+          }}
         >
           {item}
         </Button>
