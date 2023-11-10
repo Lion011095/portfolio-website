@@ -124,6 +124,7 @@ export const projects = [
       "Game Cards showing details about games.",
       "Dark Mode.",
     ],
+    link: "https://game-hub-green-six.vercel.app/",
     image: gameHub,
   },
   {
@@ -135,6 +136,7 @@ export const projects = [
       "Weekly recipes and prices.",
       "Meal Cards detailing ingredients and price.",
     ],
+    link: "",
     image: cookZilla,
   },
   {
@@ -146,6 +148,7 @@ export const projects = [
       "Form to add an observation.",
       "Specie filtering.",
     ],
+    link: "",
     image: wildLife,
   },
 ];
