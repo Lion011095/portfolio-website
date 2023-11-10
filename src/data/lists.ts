@@ -92,7 +92,7 @@ export const workList = [
 ];
 
 export const softSkills = [
-  "Analytical and technical approach to problem solving.",
+  "Analytical and technical approach to active problem solving.",
   "Highly organized individual who excels in managing multiple projects and tasks simultaneously.",
   "Team player who takes initiative with strong communication skills and collaborates well with others.",
   "Extremely self-motivated and self-disciplined with good time managment skills assuring tasks are done on time.",

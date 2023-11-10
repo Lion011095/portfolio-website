@@ -18,7 +18,7 @@ const NavMenu = () => {
           }}
           _hover={{
             textDecor: "none",
-            color: useColorModeValue("blue.500", "white"),
+            color: useColorModeValue("blue.500", "gray.200"),
           }}
         >
           {item}
