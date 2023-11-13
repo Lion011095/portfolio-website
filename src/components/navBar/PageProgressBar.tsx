@@ -18,7 +18,7 @@ const PageProgressBar = () => {
     window.addEventListener("scroll", progressBarHandler);
 
     return () => window.removeEventListener("scroll", progressBarHandler);
-  });
+  }, []);
 
   return (
     <Progress
