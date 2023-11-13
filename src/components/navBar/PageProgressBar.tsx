@@ -11,7 +11,6 @@ const PageProgressBar = () => {
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
       const scroll = totalScroll / windowHeight;
-      console.log(scroll);
 
       setProgressValue(scroll * 100);
     };
