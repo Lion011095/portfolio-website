@@ -26,6 +26,7 @@ import { LiaIdCard } from "react-icons/lia";
 import { BsArrowUpCircleFill } from "react-icons/bs";
 import name from "./assets/Lion glitch 800.gif";
 import ContactIcons from "./components/ContactIcons";
+import PageProgressBar from "./components/navBar/PageProgressBar";
 
 function App() {
   const bg = useColorModeValue("gray.200", "gray.600");
@@ -35,6 +36,7 @@ function App() {
     <Grid templateAreas={`"header" "main" "contact" "footer"`}>
       <GridItem area={"header"} id="header" pos={"fixed"} zIndex={1} w={"100%"}>
         <Header />
+        <PageProgressBar />
       </GridItem>
       <GridItem area={"main"} bg={bg} alignContent={"center"}>
         <VStack borderBottom={"solid"} borderBottomWidth={1}>
