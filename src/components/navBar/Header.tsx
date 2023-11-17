@@ -15,7 +15,13 @@ const Header = () => {
       pl={"7px"}
       justifyContent={"space-between"}
     >
-      <Image mb="2px" src={lionLogo} boxSize={10} />
+      <Image
+        mb="2px"
+        src={lionLogo}
+        boxSize={10}
+        onClick={() => scrollTo({ top: 0, behavior: "smooth" })}
+        cursor={"pointer"}
+      />
       <NavMenu />
       <ColorThemeSwitch />
     </HStack>

@@ -2,7 +2,7 @@ import { HStack, useColorModeValue, Button } from "@chakra-ui/react";
 import { menu } from "../../data/lists";
 
 const NavMenu = () => {
-  const location = [80, 1145, 2175, 3220, 10000];
+  const location = [255, 1100, 2132, 3172, 5000];
 
   return (
     <HStack>
