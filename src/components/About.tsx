@@ -10,7 +10,7 @@ const About = ({ color }: AboutProps) => {
   const subHeadingWeight = 500;
 
   return (
-    <VStack id="about" justify={"center"} w={"60%"}>
+    <VStack justify={"center"} w={"60%"}>
       <Heading
         as={"h3"}
         size={"md"}
