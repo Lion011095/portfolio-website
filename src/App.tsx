@@ -94,7 +94,7 @@ function App() {
         <HStack justify={"center"} mb={10}>
           <VStack>
             <ContactIcons contacts={contactList} />
-            <Text>
+            <Text px={"10px"} textAlign={"center"}>
               You can{" "}
               <Link
                 color={subHeadingColor}

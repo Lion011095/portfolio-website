@@ -40,7 +40,11 @@ const ProjectCard = ({ projects, weight, color }: ProjectCardProps) => {
           <CardBody>
             <Image src={project.image} borderRadius={"7px"} mb={"10px"} />
             <HStack justifyContent={"space-between"} mb={"10px"}>
-              <Heading as={"h3"} size={"lg"} ml={"20px"}>
+              <Heading
+                as={"h3"}
+                size={{ base: "sm", lg: "lg" }}
+                ml={{ base: "10px", lg: "20px" }}
+              >
                 {project.link ? (
                   <Link href={project.link} isExternal>
                     {project.name}

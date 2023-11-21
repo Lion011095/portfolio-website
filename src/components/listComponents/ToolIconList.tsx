@@ -36,7 +36,7 @@ const ToolIconList = ({ tools }: ToolIconsProps) => {
   };
 
   return (
-    <HStack marginX={"20px"}>
+    <HStack marginX={{ base: "10px", lg: "20px" }}>
       {tools.map((tool) => (
         <Icon
           key={tool}
