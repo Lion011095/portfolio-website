@@ -1,15 +1,9 @@
-import { List, ListItem, useColorModeValue } from "@chakra-ui/react";
+import { List, ListItem } from "@chakra-ui/react";
 import { workList } from "../../data/lists";
 
 const WorkList = () => {
   return (
-    <List
-      pb={10}
-      borderBottom={"solid"}
-      borderBottomWidth={1}
-      borderBottomColor={useColorModeValue("blue.600", "blue.300")}
-      px={"190px"}
-    >
+    <List pb={10} mx={"20px"}>
       {workList.map((item) => (
         <ListItem mb={2} key={item}>
           {item}

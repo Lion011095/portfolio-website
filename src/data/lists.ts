@@ -1,4 +1,4 @@
-import { Education } from "../components/Education";
+import { Education } from "../components/listComponents/EducationList";
 import { skillLevel } from "../components/SkillLevel";
 import gameHub from "../assets/gameHub.png";
 import wildLife from "../assets/wildlife.png";

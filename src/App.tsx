@@ -7,13 +7,12 @@ import {
   Text,
   VStack,
   useColorModeValue,
-  Image,
   Link,
 } from "@chakra-ui/react";
 import Header from "./components/navBar/Header";
 import About from "./components/About";
 import WorkList from "./components/listComponents/WorkList";
-import Experience from "./components/Education";
+import Experience from "./components/listComponents/EducationList";
 import SkillLevel from "./components/SkillLevel";
 import {
   educationList,
@@ -24,9 +23,10 @@ import {
 import ProjectCard from "./components/ProjectCard/ProjectCard";
 import { LiaIdCard } from "react-icons/lia";
 import { BsArrowUpCircleFill } from "react-icons/bs";
-import name from "./assets/Lion glitch 800.gif";
 import ContactIcons from "./components/ContactIcons";
 import PageProgressBar from "./components/navBar/PageProgressBar";
+import MainTitle from "./components/MainTitle";
+import SectionTitle from "./components/SectionTitle";
 
 function App() {
   const bg = useColorModeValue("gray.200", "gray.600");
@@ -34,49 +34,24 @@ function App() {
 
   return (
     <Grid templateAreas={`"header" "main" "contact" "footer"`}>
-      <GridItem area={"header"} id="header" pos={"fixed"} zIndex={1} w={"100%"}>
+      <GridItem area={"header"} pos={"fixed"} zIndex={1} w={"100%"}>
         <Header />
         <PageProgressBar />
       </GridItem>
-      <GridItem area={"main"} bg={bg} alignContent={"center"}>
+      <GridItem area={"main"} bg={bg}>
         <VStack borderBottom={"solid"} borderBottomWidth={1}>
-          <Image src={name} borderBottom={"solid"} mt={20} />
-          <Heading
-            as={"h2"}
-            size={"lg"}
-            mb={10}
-            color={useColorModeValue("orange.400", "orange.300")}
-          >
-            Full-Stack Developer
-          </Heading>
+          <MainTitle />
           <About color={subHeadingColor} />
+          <SectionTitle id="education" title="Education" />
           <Experience education={educationList} color={subHeadingColor} />
-          <Heading
-            mr={"600px"}
-            mb={"40px"}
-            pr={"252px"}
-            color={useColorModeValue("orange.400", "orange.300")}
-            id="skills"
-            as={"h2"}
-          >
-            Skill Knowledge
-          </Heading>
+          <SectionTitle id="skills" title="Skill Knowledge" />
           <SkillLevel
             skillLevelArr={skillLevelArr}
             barColor={subHeadingColor}
           />
           <Heading size={"lg"}>Worked With</Heading>
           <WorkList />
-          <Heading
-            id="portfolio"
-            mr={"600px"}
-            mb={"20px"}
-            pr={"380px"}
-            color={useColorModeValue("orange.400", "orange.300")}
-            as={"h2"}
-          >
-            Portfolio
-          </Heading>
+          <SectionTitle id="portfolio" title="Portfolio" />
           <ProjectCard
             projects={projects}
             weight={500}
@@ -100,7 +75,12 @@ function App() {
         </HStack>
         <HStack justify={"space-between"}>
           <HStack>
-            <Text ml={"350px"} fontWeight={600} fontSize={"2xl"} id="contact">
+            <Text
+              ml={{ base: "20px", md: "100px", lg: "350px" }}
+              fontWeight={600}
+              fontSize={"2xl"}
+              id="contact"
+            >
               Contact
             </Text>
             <Icon

@@ -12,7 +12,7 @@ interface skillLevelProps {
 
 const skillLevel = ({ skillLevelArr, barColor }: skillLevelProps) => {
   return (
-    <Stack w={"35%"} pr="40px" mb={5}>
+    <Stack w={"50%"} pr="40px" mb={5}>
       {skillLevelArr.map((skill) => (
         <Box key={skill.name}>
           <Text fontWeight={500}>{skill.name}</Text>

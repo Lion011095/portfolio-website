@@ -18,18 +18,16 @@ const SkillList = ({ skillList, skillTitle, weight, color }: skillProps) => {
   return (
     <>
       <Heading
-        maxW={800}
+        maxW={700}
         width={"100%"}
-        float={"left"}
         as={"h4"}
         size={"sm"}
         fontWeight={weight}
-        px={"50px"}
         color={color}
       >
         {skillTitle}
       </Heading>
-      <List maxW={730} px={"50px"} spacing={3} mb={"40px"}>
+      <List maxW={730} px={{ lg: "50px" }} spacing={3} mb={"40px"} mx={"20px"}>
         {skillList.map((skill) => (
           <ListItem key={skill}>
             <ListIcon

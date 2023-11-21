@@ -8,7 +8,7 @@ import {
   Link,
   useColorModeValue,
 } from "@chakra-ui/react";
-import ToolIconList from "./ToolIconList";
+import ToolIconList from "../listComponents/ToolIconList";
 import ProjectFeatureList from "./ProjectFeatureList";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
@@ -35,6 +35,7 @@ const ProjectCard = ({ projects, weight, color }: ProjectCardProps) => {
           mb={"50px"}
           bgColor={useColorModeValue("gray.300", "gray.700")}
           key={projects.indexOf(project)}
+          mx={"20px"}
         >
           <CardBody>
             <Image src={project.image} borderRadius={"7px"} mb={"10px"} />

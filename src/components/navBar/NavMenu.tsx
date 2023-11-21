@@ -1,11 +1,16 @@
-import { HStack, useColorModeValue, Button } from "@chakra-ui/react";
+import { useColorModeValue, Button } from "@chakra-ui/react";
 import { menu } from "../../data/lists";
 
 const NavMenu = () => {
-  const location = [255, 1100, 2132, 3172, 5000];
+  const handleClickScroll = (elmnt: string) => {
+    const element = document.getElementById(elmnt);
+    if (element) {
+      element.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  };
 
   return (
-    <HStack>
+    <>
       {menu.map((item) => (
         <Button
           mx={3}
@@ -14,7 +19,7 @@ const NavMenu = () => {
           color={useColorModeValue("black", "orange.300")}
           variant={"link"}
           onClick={() => {
-            scrollTo({ top: location[menu.indexOf(item)], behavior: "smooth" });
+            handleClickScroll(item.toLowerCase());
           }}
           _hover={{
             textDecor: "none",
@@ -24,7 +29,7 @@ const NavMenu = () => {
           {item}
         </Button>
       ))}
-    </HStack>
+    </>
   );
 };
 

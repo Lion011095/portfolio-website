@@ -18,7 +18,7 @@ const ContactIcons = ({ contacts }: ContactIconsProps) => {
           <Icon
             as={contact.icon}
             boxSize={"25px"}
-            _hover={{ color: useColorModeValue("orange.400", "orange.300") }}
+            _hover={{ color: useColorModeValue("orange.400", "orange.200") }}
           />
         </Link>
       ))}

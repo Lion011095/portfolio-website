@@ -10,17 +10,8 @@ const About = ({ color }: AboutProps) => {
   const subHeadingWeight = 500;
 
   return (
-    <VStack
-      textAlign={"left"}
-      borderBottom={"solid"}
-      borderBottomWidth={1}
-      px="164px"
-      borderBottomColor={color}
-      id="about"
-    >
+    <VStack id="about" justify={"center"} w={"60%"}>
       <Heading
-        w={800}
-        pl={"50px"}
         as={"h3"}
         size={"md"}
         fontWeight={subHeadingWeight}
@@ -28,7 +19,7 @@ const About = ({ color }: AboutProps) => {
       >
         About Me
       </Heading>
-      <Text w={730} pl={"50px"} mb={"20px"}>
+      <Text maxW={630}>
         Motivated software developer with a strong desire to excel in a
         fast-paced environment with focus on innovative problem-solving.
       </Text>
