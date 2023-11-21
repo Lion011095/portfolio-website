@@ -50,7 +50,7 @@ const ProjectCard = ({ projects, weight, color }: ProjectCardProps) => {
                     {project.name}
                     <Icon
                       as={FaExternalLinkAlt}
-                      boxSize={"20px"}
+                      boxSize={{ base: "15px", lg: "20px" }}
                       mx={2}
                       color={useColorModeValue("gray.600", "gray.300")}
                     />
