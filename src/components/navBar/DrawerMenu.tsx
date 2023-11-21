@@ -40,7 +40,7 @@ const MenuButton = () => {
           <DrawerHeader borderBottomWidth="1px">Menu</DrawerHeader>
           <DrawerBody>
             <VStack>
-              <NavMenu />
+              <NavMenu onSelect={onClose} />
             </VStack>
           </DrawerBody>
         </DrawerContent>

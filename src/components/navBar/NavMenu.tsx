@@ -1,7 +1,11 @@
 import { useColorModeValue, Button } from "@chakra-ui/react";
 import { menu } from "../../data/lists";
 
-const NavMenu = () => {
+interface NavMenuProps {
+  onSelect?: () => void;
+}
+
+const NavMenu = ({ onSelect }: NavMenuProps) => {
   const handleClickScroll = (elmnt: string) => {
     const element = document.getElementById(elmnt);
     if (element) {
@@ -20,6 +24,7 @@ const NavMenu = () => {
           variant={"link"}
           onClick={() => {
             handleClickScroll(item.toLowerCase());
+            if (onSelect) onSelect();
           }}
           _hover={{
             textDecor: "none",
