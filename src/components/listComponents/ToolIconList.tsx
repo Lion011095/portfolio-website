@@ -42,7 +42,7 @@ const ToolIconList = ({ tools }: ToolIconsProps) => {
           key={tool}
           as={iconMap[tool]}
           color={useColorModeValue("gray.600", "gray.300")}
-          boxSize={"20px"}
+          boxSize={{ base: "15px", lg: "20px" }}
         />
       ))}
     </HStack>
