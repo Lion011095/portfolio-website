@@ -17,6 +17,7 @@ const SectionTitle = ({ title, id }: SectionTitleProps) => {
       borderTop={"solid"}
       borderTopWidth={1}
       borderTopColor={useColorModeValue("blue.600", "blue.300")}
+      mb={"10px"}
     >
       {title}
     </Heading>
