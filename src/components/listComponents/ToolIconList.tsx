@@ -7,7 +7,7 @@ interface ToolIconsProps {
 
 const ToolIconList = ({ tools }: ToolIconsProps) => {
   return (
-    <HStack marginX={{ base: "10px", lg: "20px" }}>
+    <HStack marginX={{ base: "10px", lg: "20px" }} pb={"5px"}>
       {tools.map((tool) => (
         <Icon
           key={tool}
