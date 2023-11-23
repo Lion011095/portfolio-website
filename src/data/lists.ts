@@ -3,7 +3,7 @@ import { skillLevel } from "../components/SkillLevel";
 import gameHub from "../assets/gameHub.png";
 import wildLife from "../assets/wildlife.png";
 import cookZilla from "../assets/Cookzilla.png";
-import { TbBrandLinkedin } from "react-icons/tb";
+import { TbBrandLinkedin, TbDatabase } from "react-icons/tb";
 import { BsGithub } from "react-icons/bs";
 import { FaReact } from "react-icons/fa";
 import {
@@ -22,6 +22,7 @@ import {
   TbBrandHtml5,
   TbLocation,
   TbBrandCss3,
+  TbBrandPython,
 } from "react-icons/tb";
 import { IconType } from "react-icons";
 
@@ -75,16 +76,20 @@ export const skillLevelArr: skillLevel[] = [
     level: 80,
   },
   {
-    name: "HTML5",
-    level: 80,
-  },
-  {
     name: "CSS",
     level: 80,
   },
   {
-    name: "CSS frameworks",
+    name: "ChakraUI",
     level: 90,
+  },
+  {
+    name: "HTML5",
+    level: 80,
+  },
+  {
+    name: "Bootstrap",
+    level: 85,
   },
   {
     name: "Node.js",
@@ -96,7 +101,7 @@ export const skillLevelArr: skillLevel[] = [
   },
   {
     name: "Python",
-    level: 70,
+    level: 65,
   },
 ];
 
@@ -134,7 +139,7 @@ export const menu = ["ABOUT", "EDUCATION", "SKILLS", "PORTFOLIO", "CONTACT"];
 export const projects = [
   {
     name: "Game Hub",
-    tools: ["React", "TypeScript", "ChakraUI", "Axios", "VSCode", "Vite"],
+    tools: ["React.js", "TypeScript", "ChakraUI", "Axios", "VSCode", "Vite"],
     features: [
       "Filter by: Genre and Platform.",
       "Sort games in your desired way.",
@@ -149,11 +154,11 @@ export const projects = [
   {
     name: "CookZilla",
     tools: [
-      "HTML",
+      "HTML5",
       "CSS",
       "JavaScript",
       "Handlebars",
-      "NodeJS",
+      "Node.js",
       "MongoDB",
       "VSCode",
     ],
@@ -168,7 +173,7 @@ export const projects = [
   },
   {
     name: "Wildlife",
-    tools: ["HTML", "JavaScript", "CSS", "GeoLocation", "VSCode"],
+    tools: ["HTML5", "JavaScript", "CSS", "GeoLocation", "VSCode"],
     features: [
       "Geo Location.",
       "Search for a specific location for species.",
@@ -188,16 +193,18 @@ export const contactList = [
 export const iconMap: { [key: string]: IconType } = {
   TypeScript: TbBrandTypescript,
   JavaScript: TbBrandJavascript,
-  NodeJS: TbBrandNodejs,
+  "Node.js": TbBrandNodejs,
   Vite: TbBrandVite,
   ChakraUI: SiChakraui,
-  React: FaReact,
+  "React.js": FaReact,
   Bootstrap: TbBrandBootstrap,
   VSCode: TbBrandVscode,
   Axios: SiAxios,
-  HTML: TbBrandHtml5,
+  HTML5: TbBrandHtml5,
   GeoLocation: TbLocation,
   CSS: TbBrandCss3,
   Handlebars: SiHandlebarsdotjs,
   MongoDB: SiMongodb,
+  "SQL/NoSQL databases": TbDatabase,
+  Python: TbBrandPython,
 };

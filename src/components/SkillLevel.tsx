@@ -1,4 +1,5 @@
-import { Progress, Text, Stack, Box } from "@chakra-ui/react";
+import { Progress, Stack, Box } from "@chakra-ui/react";
+import SkillLevelTitle from "./SkillLevelTitle";
 
 export interface skillLevel {
   name: string;
@@ -15,7 +16,7 @@ const skillLevel = ({ skillLevelArr, barColor }: skillLevelProps) => {
     <Stack w={"50%"} pr="40px" mb={5}>
       {skillLevelArr.map((skill) => (
         <Box key={skill.name}>
-          <Text fontWeight={500}>{skill.name}</Text>
+          <SkillLevelTitle skillName={skill.name} />
           <Progress
             hasStripe
             isAnimated
