@@ -5,6 +5,25 @@ import wildLife from "../assets/wildlife.png";
 import cookZilla from "../assets/Cookzilla.png";
 import { TbBrandLinkedin } from "react-icons/tb";
 import { BsGithub } from "react-icons/bs";
+import { FaReact } from "react-icons/fa";
+import {
+  SiChakraui,
+  SiAxios,
+  SiHandlebarsdotjs,
+  SiMongodb,
+} from "react-icons/si";
+import {
+  TbBrandTypescript,
+  TbBrandJavascript,
+  TbBrandNodejs,
+  TbBrandVite,
+  TbBrandBootstrap,
+  TbBrandVscode,
+  TbBrandHtml5,
+  TbLocation,
+  TbBrandCss3,
+} from "react-icons/tb";
+import { IconType } from "react-icons";
 
 export const educationList: Education[] = [
   {
@@ -129,7 +148,15 @@ export const projects = [
   },
   {
     name: "CookZilla",
-    tools: ["HTML", "CSS", "JavaScript", "Handlebars", "NodeJS", "VSCode"],
+    tools: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Handlebars",
+      "NodeJS",
+      "MongoDB",
+      "VSCode",
+    ],
     features: [
       "Register and login forms.",
       "Authentication and Authorization of customer and admin accounts.",
@@ -157,3 +184,20 @@ export const contactList = [
   { link: "https://www.linkedin.com/in/lionyakubov/", icon: TbBrandLinkedin },
   { link: "https://github.com/Lion011095", icon: BsGithub },
 ];
+
+export const iconMap: { [key: string]: IconType } = {
+  TypeScript: TbBrandTypescript,
+  JavaScript: TbBrandJavascript,
+  NodeJS: TbBrandNodejs,
+  Vite: TbBrandVite,
+  ChakraUI: SiChakraui,
+  React: FaReact,
+  Bootstrap: TbBrandBootstrap,
+  VSCode: TbBrandVscode,
+  Axios: SiAxios,
+  HTML: TbBrandHtml5,
+  GeoLocation: TbLocation,
+  CSS: TbBrandCss3,
+  Handlebars: SiHandlebarsdotjs,
+  MongoDB: SiMongodb,
+};

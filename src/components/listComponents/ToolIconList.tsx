@@ -1,17 +1,4 @@
-import { FaReact } from "react-icons/fa";
-import { SiChakraui, SiAxios, SiHandlebarsdotjs } from "react-icons/si";
-import {
-  TbBrandTypescript,
-  TbBrandJavascript,
-  TbBrandNodejs,
-  TbBrandVite,
-  TbBrandBootstrap,
-  TbBrandVscode,
-  TbBrandHtml5,
-  TbLocation,
-  TbBrandCss3,
-} from "react-icons/tb";
-import { IconType } from "react-icons";
+import { iconMap } from "../../data/lists";
 import { HStack, Icon, useColorModeValue } from "@chakra-ui/react";
 
 interface ToolIconsProps {
@@ -19,22 +6,6 @@ interface ToolIconsProps {
 }
 
 const ToolIconList = ({ tools }: ToolIconsProps) => {
-  const iconMap: { [key: string]: IconType } = {
-    TypeScript: TbBrandTypescript,
-    JavaScript: TbBrandJavascript,
-    NodeJS: TbBrandNodejs,
-    Vite: TbBrandVite,
-    ChakraUI: SiChakraui,
-    React: FaReact,
-    Bootstrap: TbBrandBootstrap,
-    VSCode: TbBrandVscode,
-    Axios: SiAxios,
-    HTML: TbBrandHtml5,
-    GeoLocation: TbLocation,
-    CSS: TbBrandCss3,
-    Handlebars: SiHandlebarsdotjs,
-  };
-
   return (
     <HStack marginX={{ base: "10px", lg: "20px" }}>
       {tools.map((tool) => (
